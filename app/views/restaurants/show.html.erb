@@ -1,21 +1,32 @@
 
 <div class="container">
-  <h1><%= @restaurant.name %></h1>
-  <em>Restaurant <%= @restaurant.category %></em>
-  <br>
-  <br>
-  <p><%= @restaurant.address %></p>
-  <p><%= @restaurant.phone_number %></p>
+  <div class="card_rest">
+    <div class="card-category"><%= @restaurant.phone_number %></div>
+    <div class="card-description">
+      <h3><%= @restaurant.name %> :</h3>
+      <p><%= @restaurant.address %></p>
+    </div>
+      <img class="card-user" src="https://source.unsplash.com/random/50x50">
+  </div>
 
   <div class="container">
     <%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
     <div class="row">
       <% @restaurant.reviews.each do |review| %>
-      <div class="col-xs-12 col-md-4 col-lg-3">
-        <strong><%= review.rating %></strong>
-        <em><%= review.content %></em>
+        <div class="card"">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h6 class="card-subtitle mb-2 text-muted text-center stars">
+                <% review.rating.times do %>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                <% end %>
+              </h6>
+              <p class="card-text text-review"><%= review.content %></p>
+            </li>
+          </ul>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
