@@ -6,4 +6,16 @@
   <br>
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.phone_number %></p>
+
+  <div class="container">
+    <%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+    <div class="row">
+      <% @restaurant.reviews.each do |review| %>
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <strong><%= review.rating %></strong>
+        <em><%= review.content %></em>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
