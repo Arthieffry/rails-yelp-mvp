@@ -10,7 +10,7 @@
   a = Restaurant.create!(
     name: Faker::Pokemon.name,
     address: Faker::Address.street_address + ", " + Faker::Pokemon.location,
-    category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
+    category: ["Chinese", "Italian", "Japanese", "French", "Belgian"].sample,
     phone_number: Faker::PhoneNumber.phone_number,
     )
   p a

@@ -5,7 +5,7 @@
       <%= f.input :name, label: 'Restaurant name', placeholder: 'Pikachu' %>
       <%= f.input :address, label: 'Restaurant address', placeholder: '20 Sun street, BourgPalette' %>
       <%= f.input :phone_number, label: 'Restaurant phone number', placeholder: '(555) 454 344' %>
-      <%= f.input :category, label: 'Category of restaurant', collection: [['Chinese', 1], ['Italian', 2], ['French', 3], ['Japanese', 4], ['Belgian', 5]], class: 'form-control form-control-lg' %>
+      <%= f.input :category, label: 'Category of restaurant', collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"], class: 'form-control form-control-lg' %>
       <em>Les champs avec " * " sont obligatoires</em><br>
       <%= f.submit "Add a Pokéresto", class: "btn btn-primary" %>
     <% end %>
