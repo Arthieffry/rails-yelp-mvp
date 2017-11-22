@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for (@restaurant) do |f| %>
+    <%= f.input :name, placeholder: 'Pikachu' %>
+    <%= f.input :address, placeholder: '20 Sun street, BourgPalette' %>
+    <%= f.input :phone_number, placeholder: '(555) 454 344' %>
+    <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+    <%= f.submit "Add a Pokéresto", class: "btn btn-primary" %>
+  <% end %>
+</div>
